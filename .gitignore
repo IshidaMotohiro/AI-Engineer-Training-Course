@@ -1,0 +1,21 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Test files
+test_*.py
+check_data.py
+
+# Generated CSV files
+data_sample.csv
+
+# Optional: Exclude large data files (uncomment if needed)
+# data/*.xls
+# data/*.xlsx
