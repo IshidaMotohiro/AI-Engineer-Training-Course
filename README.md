@@ -123,6 +123,32 @@ http://127.0.0.1:5000
 └── README.md             # このファイル
 ```
 
+## デプロイ
+
+このアプリケーションをRender.comに無料でデプロイできます。
+
+### Render.comへのデプロイ手順
+
+1. [Render.com](https://render.com/) にアクセスしてアカウントを作成
+2. "New +" ボタンをクリックし、"Web Service" を選択
+3. GitHubリポジトリを接続
+4. このリポジトリ（AI-Engineer-Training-Course）を選択
+5. 以下の設定を入力：
+   - **Name**: `tse-stock-search`（任意の名前）
+   - **Environment**: `Python`
+   - **Build Command**: `pip install -r requirements.txt`
+   - **Start Command**: `gunicorn app:app --bind 0.0.0.0:$PORT`
+   - **Plan**: `Free`
+6. "Create Web Service" をクリック
+
+デプロイが完了すると、`https://your-app-name.onrender.com` のようなURLでアクセスできるようになります。
+
+### 注意事項
+
+- 無料プランでは、15分間アクセスがないとスリープ状態になります
+- 初回アクセス時は起動に30秒程度かかる場合があります
+- データファイル（814KB）も含まれているため、デプロイには数分かかります
+
 ## ライセンス
 
 このプロジェクトは個人利用を目的としています。
